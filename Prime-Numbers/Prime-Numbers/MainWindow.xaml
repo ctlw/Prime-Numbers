@@ -1,0 +1,20 @@
+﻿<Window x:Class="Prime_Numbers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prime_Numbers"
+        mc:Ignorable="d"
+        Title="Prime Numbers" Height="350" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <!-- Set up the grid-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".25*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- add a label to describe what is in the listbox-->
+        <Label Name="lblDesc" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Content="Here are all of the prime numbers between 1 and 100:" FontSize="20"/>
+        <!-- add a listbox to fill with prime numbers with binding code -->
+        <ListBox Name="lbxList" Grid.Row="1" BorderThickness="5" Margin="5" ItemsSource="{Binding AllPrimes}"/>
+    </Grid>
+</Window>
